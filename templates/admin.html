@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Data collector Site</title>
+    <head>
+        <link href="../static/admin.css" rel="stylesheet">
+    </head>
+        <body>
+            <div class="container">
+                <h1>Collecting Data</h1>
+                <h3>Update the data</h3>
+                <div class="message">
+                    {{text|safe}}
+                </div>
+                <form action="{{url_for('success')}}" method="POST">
+                    <input title="State" placeholder="Enter State" type="text" name="state" required> <br>
+                    <input title="Province" placeholder="Enter Province" type="text" name="province" required> <br>
+                    <input title="Description" placeholder="Enter Description" type="text" name="description" required> <br>
+                </form>
+            </div>
+        </body>
+</html>
